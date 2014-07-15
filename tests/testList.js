@@ -10,7 +10,7 @@ try {
 
     var arguments = process.argv.splice(2);
     if (arguments.length != 3) {
-        console.log('node infoList fileList localMediaPath NSimultaneous');
+        console.log('node infoList filePath localMediaPath NSimultaneous');
         process.exit(0);
     }
 
@@ -84,7 +84,7 @@ try {
                         } 
                         else {
                             // console.log(oInfo);
-                            console.log('MediaInfo Succeeds! about to unlink testFile',localFile);
+                            console.log('MediaInfo Succeeds! about to unlink testFile',localFile,oInfo);
                             fs.unlink(localFile, function(ulerr) { 
                                 return cbWrap(ulerr);
                             });
